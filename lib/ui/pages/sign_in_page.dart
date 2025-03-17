@@ -1,4 +1,5 @@
 import 'package:ewallet_project_app/shared/theme.dart';
+import 'package:ewallet_project_app/ui/widgets/buttons.dart';
 import 'package:flutter/material.dart';
 
 class SignInPage extends StatelessWidget {
@@ -92,39 +93,17 @@ class SignInPage extends StatelessWidget {
                 SizedBox(
                   height: 30,
                 ),
-                SizedBox(
-                  width: double.infinity,
-                  height: 50,
-                  child: TextButton(
-                    onPressed: () {},
-                    style: TextButton.styleFrom(
-                      backgroundColor: purpleColor,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(56),
-                      ),
-                    ),
-                    child: Text(
-                      'Sign In',
-                      style: whiteTextStyle.copyWith(
-                          fontSize: 16, fontWeight: semiBold),
-                    ),
-                  ),
+                CustomeFilledButton(
+                  title: 'Sign In',
+                  onPressed: () {},
                 ),
                 SizedBox(
                   height: 50,
                 ),
-                SizedBox(
-                  width: double.infinity,
-                  height: 24,
-                  child: TextButton(
-                    onPressed: () {},
-                    style: TextButton.styleFrom(padding: EdgeInsets.zero),
-                    child: Text(
-                      'Create new account',
-                      style: greyTextStyle.copyWith(fontSize: 16),
-                    ),
-                  ),
-                )
+                CustomTextButton(
+                  title: 'Create New Account',
+                  onPressed: () {},
+                ),
               ],
             ),
           ),
