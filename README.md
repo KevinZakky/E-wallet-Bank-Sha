@@ -1,4 +1,4 @@
-# ewallet_project_app
+# ewallet_bank_sha
 
 A new Flutter project.
 
