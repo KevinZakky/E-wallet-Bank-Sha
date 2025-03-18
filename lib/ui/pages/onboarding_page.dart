@@ -91,9 +91,11 @@ class _OnboardingPageState extends State<OnboardingPage> {
                   currentIndex == 2
                       ? Column(
                           children: [
-                            CustomeFilledButton(
+                            CustomFilledButton(
                               title: 'Get Started',
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.pushNamed(context, '/sign-up');
+                              },
                             ),
                             const SizedBox(
                               height: 20,
@@ -139,7 +141,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                                       : lightBackgroundColor),
                             ),
                             const Spacer(),
-                            CustomeFilledButton(
+                            CustomFilledButton(
                               title: 'Continue',
                               width: 150,
                               onPressed: () {

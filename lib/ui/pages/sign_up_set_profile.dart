@@ -3,8 +3,8 @@ import 'package:ewallet_project_app/ui/widgets/Forms.dart';
 import 'package:ewallet_project_app/ui/widgets/buttons.dart';
 import 'package:flutter/material.dart';
 
-class SignInPage extends StatelessWidget {
-  const SignInPage({super.key});
+class SignUpSetProfile extends StatelessWidget {
+  const SignUpSetProfile({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,7 @@ class SignInPage extends StatelessWidget {
             ),
           ),
           Text(
-            'Sign In &\nGrow Your Finance',
+            'Join Us To Unlock\nYour Growth',
             style: blackTextStyle.copyWith(fontWeight: semiBold, fontSize: 20),
           ),
           const SizedBox(
@@ -35,41 +35,57 @@ class SignInPage extends StatelessWidget {
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20), color: whiteColor),
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                CustomFormField(title: 'Email Address'),
+                Container(
+                  width: 120,
+                  height: 120,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Color(0xffF1F1F9),
+                  ),
+                  child: Center(
+                    child: Image.asset(
+                      'assets/ic_upload.png',
+                      width: 32,
+                    ),
+                  ),
+                ),
+                Container(
+                  width: 120,
+                  height: 120,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    image: DecorationImage(
+                      image: AssetImage('assets/img_profile.png'),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
                 const SizedBox(
                   height: 16,
                 ),
-                CustomFormField(
-                  title: 'Password',
-                  obscureText: true,
+                Text(
+                  'Shayna Hanna',
+                  style:
+                      blackTextStyle.copyWith(fontSize: 18, fontWeight: medium),
                 ),
                 const SizedBox(
-                  height: 8,
+                  height: 30,
                 ),
-                Align(
-                  alignment: Alignment.centerRight,
-                  child: Text(
-                    'Forgot Password',
-                    style: blueTextStyle.copyWith(fontSize: 14),
-                  ),
+                CustomFormField(
+                  title: 'Set PIN (6 digit number)',
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 CustomFilledButton(
-                  title: 'Sign In',
-                  onPressed: () {},
+                  title: 'Continue',
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/sign-up-upload-profile');
+                  },
                 ),
                 SizedBox(
                   height: 50,
-                ),
-                CustomTextButton(
-                  title: 'Create New Account',
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/sign-up');
-                  },
                 ),
               ],
             ),

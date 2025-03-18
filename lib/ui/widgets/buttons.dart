@@ -1,13 +1,13 @@
 import 'package:ewallet_project_app/shared/theme.dart';
 import 'package:flutter/material.dart';
 
-class CustomeFilledButton extends StatelessWidget {
+class CustomFilledButton extends StatelessWidget {
   final String title;
   final double width;
   final double height;
   final VoidCallback? onPressed;
 
-  const CustomeFilledButton(
+  const CustomFilledButton(
       {super.key,
       required this.title,
       this.width = double.infinity,
