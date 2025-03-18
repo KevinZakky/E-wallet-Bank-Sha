@@ -1,5 +1,4 @@
 import 'package:ewallet_project_app/shared/theme.dart';
-import 'package:ewallet_project_app/ui/pages/sign_in_page.dart';
 import 'package:ewallet_project_app/ui/widgets/buttons.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
@@ -102,12 +101,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                             CustomTextButton(
                               title: 'Sign In',
                               onPressed: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => const SignInPage(),
-                                  ),
-                                );
+                                Navigator.pushNamed(context, '/sign-in');
                               },
                             ),
                           ],
