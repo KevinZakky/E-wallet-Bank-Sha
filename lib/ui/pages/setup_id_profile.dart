@@ -1,10 +1,9 @@
 import 'package:ewallet_project_app/shared/theme.dart';
-import 'package:ewallet_project_app/ui/widgets/Forms.dart';
 import 'package:ewallet_project_app/ui/widgets/buttons.dart';
 import 'package:flutter/material.dart';
 
-class SignUpSetProfile extends StatelessWidget {
-  const SignUpSetProfile({super.key});
+class SetupIDProfile extends StatelessWidget {
+  const SetupIDProfile({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +23,7 @@ class SignUpSetProfile extends StatelessWidget {
             ),
           ),
           Text(
-            'Join Us To Unlock\nYour Growth',
+            'Verify Your\nAccount',
             style: blackTextStyle.copyWith(fontWeight: semiBold, fontSize: 20),
           ),
           const SizedBox(
@@ -50,43 +49,40 @@ class SignUpSetProfile extends StatelessWidget {
                     ),
                   ),
                 ),
-                Container(
-                  width: 120,
-                  height: 120,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    image: DecorationImage(
-                      image: AssetImage('assets/img_profile.png'),
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                ),
+                // Container(
+                //   width: 120,
+                //   height: 120,
+                //   decoration: BoxDecoration(
+                //     shape: BoxShape.circle,
+                //     image: DecorationImage(
+                //       image: AssetImage('assets/img_profile.png'),
+                //       fit: BoxFit.cover,
+                //     ),
+                //   ),
+                // ),
                 const SizedBox(
                   height: 16,
                 ),
                 Text(
-                  'Shayna Hanna',
+                  'Passport/ID Card',
                   style:
                       blackTextStyle.copyWith(fontSize: 18, fontWeight: medium),
                 ),
                 const SizedBox(
-                  height: 30,
-                ),
-                CustomFormField(
-                  title: 'Set PIN (6 digit number)',
-                ),
-                const SizedBox(
-                  height: 30,
+                  height: 50,
                 ),
                 CustomFilledButton(
                   title: 'Continue',
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/setup-id-profile');
-                  },
+                  onPressed: () {},
                 ),
                 SizedBox(
-                  height: 50,
+                  height: 60,
                 ),
+                CustomTextButton(
+                  title: 'Skip for now',
+                  onPressed: (),
+                  {},
+                )
               ],
             ),
           ),
