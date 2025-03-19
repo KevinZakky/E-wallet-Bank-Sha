@@ -36,20 +36,20 @@ class SignUpSetProfile extends StatelessWidget {
                 borderRadius: BorderRadius.circular(20), color: whiteColor),
             child: Column(
               children: [
-                Container(
-                  width: 120,
-                  height: 120,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: Color(0xffF1F1F9),
-                  ),
-                  child: Center(
-                    child: Image.asset(
-                      'assets/ic_upload.png',
-                      width: 32,
-                    ),
-                  ),
-                ),
+                // Container(
+                //   width: 120,
+                //   height: 120,
+                //   decoration: BoxDecoration(
+                //     shape: BoxShape.circle,
+                //     color: Color(0xffF1F1F9),
+                //   ),
+                //   child: Center(
+                //     child: Image.asset(
+                //       'assets/ic_upload.png',
+                //       width: 32,
+                //     ),
+                //   ),
+                // ),
                 Container(
                   width: 120,
                   height: 120,
@@ -74,6 +74,7 @@ class SignUpSetProfile extends StatelessWidget {
                 ),
                 CustomFormField(
                   title: 'Set PIN (6 digit number)',
+                  obscureText: true,
                 ),
                 const SizedBox(
                   height: 30,

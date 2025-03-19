@@ -80,8 +80,9 @@ class SetupIDProfile extends StatelessWidget {
                 ),
                 CustomTextButton(
                   title: 'Skip for now',
-                  onPressed: (),
-                  {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/sign-up-success');
+                  },
                 )
               ],
             ),
