@@ -16,9 +16,13 @@ class _SplashPageState extends State<SplashPage> {
   void initState() {
     super.initState();
 
-    Timer(const Duration(seconds: 2), () {
-      Navigator.pushNamed(context, '/onboarding');
-    });
+    Timer(
+      const Duration(seconds: 2),
+      () {
+        Navigator.pushNamedAndRemoveUntil(
+            context, '/onboarding', (route) => false);
+      },
+    );
   }
 
   Widget build(BuildContext context) {
