@@ -1,4 +1,5 @@
 import 'package:ewallet_project_app/shared/theme.dart';
+import 'package:ewallet_project_app/ui/widgets/home_services.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -69,7 +70,12 @@ class HomePage extends StatelessWidget {
         padding: const EdgeInsets.symmetric(
           horizontal: 24,
         ),
-        children: [buildProfile(), buildWalletCard(), buildLevel()],
+        children: [
+          buildProfile(),
+          buildWalletCard(),
+          buildLevel(),
+          buildServices()
+        ],
       ),
     );
   }
@@ -234,6 +240,49 @@ class HomePage extends StatelessWidget {
               valueColor: AlwaysStoppedAnimation(greenColor),
               backgroundColor: lightBackgroundColor,
             ),
+          )
+        ],
+      ),
+    );
+  }
+
+  Widget buildServices() {
+    return Container(
+      margin: const EdgeInsets.only(top: 30),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            'Do Something',
+            style: blackTextStyle.copyWith(fontSize: 16, fontWeight: semiBold),
+          ),
+          const SizedBox(
+            height: 14,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              HomeServices(
+                iconUrl: 'assets/ic_topup.png',
+                title: 'Top Up',
+                onTap: () {},
+              ),
+              HomeServices(
+                iconUrl: 'assets/ic_send.png',
+                title: 'Send',
+                onTap: () {},
+              ),
+              HomeServices(
+                iconUrl: 'assets/ic_withdraw.png',
+                title: 'Withdraw',
+                onTap: () {},
+              ),
+              HomeServices(
+                iconUrl: 'assets/ic_more.png',
+                title: 'More',
+                onTap: () {},
+              )
+            ],
           )
         ],
       ),
