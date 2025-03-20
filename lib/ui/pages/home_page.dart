@@ -1,4 +1,5 @@
 import 'package:ewallet_project_app/shared/theme.dart';
+import 'package:ewallet_project_app/ui/widgets/home_latest_transaction.dart';
 import 'package:ewallet_project_app/ui/widgets/home_services.dart';
 import 'package:flutter/material.dart';
 
@@ -74,7 +75,8 @@ class HomePage extends StatelessWidget {
           buildProfile(),
           buildWalletCard(),
           buildLevel(),
-          buildServices()
+          buildServices(),
+          buildLatestTransaction()
         ],
       ),
     );
@@ -283,6 +285,56 @@ class HomePage extends StatelessWidget {
                 onTap: () {},
               )
             ],
+          )
+        ],
+      ),
+    );
+  }
+
+  Widget buildLatestTransaction() {
+    return Container(
+      margin: const EdgeInsets.only(top: 30),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            'Latest Transaction',
+            style: blackTextStyle.copyWith(fontSize: 16, fontWeight: semiBold),
+          ),
+          Container(
+            padding: const EdgeInsets.all(24),
+            margin: const EdgeInsets.only(top: 14),
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20), color: whiteColor),
+            child: Column(
+              children: [
+                HomeLatestTransaction(
+                    iconUrl: 'assets/ic_transaction_cat1.png',
+                    title: 'Top Up',
+                    date: 'Yesterday',
+                    value: '+ 450.000'),
+                HomeLatestTransaction(
+                    iconUrl: 'assets/ic_transaction_cat2.png',
+                    title: 'Cashback',
+                    date: 'Sep 11',
+                    value: '+ 22.000'),
+                HomeLatestTransaction(
+                    iconUrl: 'assets/ic_transaction_cat3.png',
+                    title: 'Withdraw',
+                    date: 'Sep 2',
+                    value: '- 5.000'),
+                HomeLatestTransaction(
+                    iconUrl: 'assets/ic_transaction_cat4.png',
+                    title: 'Transfer',
+                    date: 'Aug 27',
+                    value: '- 123.500'),
+                HomeLatestTransaction(
+                    iconUrl: 'assets/ic_transaction_cat5.png',
+                    title: 'Electric',
+                    date: 'Feb 18',
+                    value: '- 12.300.000')
+              ],
+            ),
           )
         ],
       ),
