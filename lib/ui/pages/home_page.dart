@@ -1,5 +1,6 @@
 import 'package:ewallet_project_app/shared/theme.dart';
 import 'package:ewallet_project_app/ui/widgets/home_latest_transaction.dart';
+import 'package:ewallet_project_app/ui/widgets/home_send_again.dart';
 import 'package:ewallet_project_app/ui/widgets/home_services.dart';
 import 'package:flutter/material.dart';
 
@@ -76,7 +77,8 @@ class HomePage extends StatelessWidget {
           buildWalletCard(),
           buildLevel(),
           buildServices(),
-          buildLatestTransaction()
+          buildLatestTransaction(),
+          buildSendAgain(),
         ],
       ),
     );
@@ -335,6 +337,37 @@ class HomePage extends StatelessWidget {
                     value: '- 12.300.000')
               ],
             ),
+          )
+        ],
+      ),
+    );
+  }
+
+  Widget buildSendAgain() {
+    return Container(
+      margin: const EdgeInsets.only(top: 30),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            'Send Again',
+            style: blackTextStyle.copyWith(fontSize: 16, fontWeight: semiBold),
+          ),
+          const SizedBox(
+            height: 14,
+          ),
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(children: [
+              HomeSendAgain(
+                  imageUrl: 'assets/img_friend1.png', username: 'yuanita'),
+              HomeSendAgain(
+                  imageUrl: 'assets/img_friend2.png', username: 'jani'),
+              HomeSendAgain(
+                  imageUrl: 'assets/img_friend3.png', username: 'urip'),
+              HomeSendAgain(
+                  imageUrl: 'assets/img_friend4.png', username: 'masa')
+            ]),
           )
         ],
       ),
