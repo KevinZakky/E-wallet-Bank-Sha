@@ -1,4 +1,5 @@
 import 'package:ewallet_project_app/shared/theme.dart';
+import 'package:ewallet_project_app/ui/widgets/home_friendly_tips.dart';
 import 'package:ewallet_project_app/ui/widgets/home_latest_transaction.dart';
 import 'package:ewallet_project_app/ui/widgets/home_send_again.dart';
 import 'package:ewallet_project_app/ui/widgets/home_services.dart';
@@ -79,6 +80,7 @@ class HomePage extends StatelessWidget {
           buildServices(),
           buildLatestTransaction(),
           buildSendAgain(),
+          buildFriendlyTips(),
         ],
       ),
     );
@@ -368,6 +370,29 @@ class HomePage extends StatelessWidget {
               HomeSendAgain(
                   imageUrl: 'assets/img_friend4.png', username: 'masa')
             ]),
+          )
+        ],
+      ),
+    );
+  }
+
+  Widget buildFriendlyTips() {
+    return Container(
+      margin: const EdgeInsets.only(top: 30),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            'Friendly Tips',
+            style: blackTextStyle.copyWith(fontSize: 16, fontWeight: semiBold),
+          ),
+          const SizedBox(
+            height: 14,
+          ),
+          HomeFriendlyTips(
+            imageUrl: 'assets/img_tips1.png',
+            title: 'Best tips for using a credit card',
+            url: 'https://www.google.com',
           )
         ],
       ),
