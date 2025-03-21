@@ -33,7 +33,11 @@ class HomeFriendlyTips extends StatelessWidget {
             padding: const EdgeInsets.all(12.0),
             child: Text(
               title,
-              style: blackTextStyle.copyWith(fontSize: 14, fontWeight: medium),
+              style: blackTextStyle.copyWith(
+                  fontSize: 14,
+                  fontWeight: medium,
+                  overflow: TextOverflow.ellipsis),
+              maxLines: 2,
             ),
           )
         ],

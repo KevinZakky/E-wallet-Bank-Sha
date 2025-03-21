@@ -378,7 +378,7 @@ class HomePage extends StatelessWidget {
 
   Widget buildFriendlyTips() {
     return Container(
-      margin: const EdgeInsets.only(top: 30),
+      margin: const EdgeInsets.only(top: 30, bottom: 50),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -389,10 +389,31 @@ class HomePage extends StatelessWidget {
           const SizedBox(
             height: 14,
           ),
-          HomeFriendlyTips(
-            imageUrl: 'assets/img_tips1.png',
-            title: 'Best tips for using a credit card',
-            url: 'https://www.google.com',
+          Wrap(
+            spacing: 17.0,
+            runSpacing: 18.0,
+            children: [
+              HomeFriendlyTips(
+                imageUrl: 'assets/img_tips1.png',
+                title: 'Best tips for using a credit card',
+                url: 'https://www.google.com',
+              ),
+              HomeFriendlyTips(
+                imageUrl: 'assets/img_tips2.png',
+                title: 'Spot the good pie on finance model',
+                url: 'https://www.google.com',
+              ),
+              HomeFriendlyTips(
+                imageUrl: 'assets/img_tips3.png',
+                title: 'Great hack to get better advices',
+                url: 'https://www.google.com',
+              ),
+              HomeFriendlyTips(
+                imageUrl: 'assets/img_tips4.png',
+                title: 'Save more penny buy this instead',
+                url: 'https://www.google.com',
+              ),
+            ],
           )
         ],
       ),
