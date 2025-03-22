@@ -396,22 +396,22 @@ class HomePage extends StatelessWidget {
               HomeFriendlyTips(
                 imageUrl: 'assets/img_tips1.png',
                 title: 'Best tips for using a credit card',
-                url: 'https://www.google.com',
+                url: Uri.parse('https://www.google.com'),
               ),
               HomeFriendlyTips(
                 imageUrl: 'assets/img_tips2.png',
                 title: 'Spot the good pie on finance model',
-                url: 'https://www.google.com',
+                url: Uri.parse('https://www.google.com'),
               ),
               HomeFriendlyTips(
                 imageUrl: 'assets/img_tips3.png',
                 title: 'Great hack to get better advices',
-                url: 'https://www.google.com',
+                url: Uri.parse('https://www.google.com'),
               ),
               HomeFriendlyTips(
                 imageUrl: 'assets/img_tips4.png',
                 title: 'Save more penny buy this instead',
-                url: 'https://www.google.com',
+                url: Uri.parse('https://www.google.com'),
               ),
             ],
           )
