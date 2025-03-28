@@ -1,4 +1,6 @@
 import 'package:ewallet_project_app/shared/theme.dart';
+import 'package:ewallet_project_app/ui/widgets/buttons.dart';
+import 'package:ewallet_project_app/ui/widgets/topup_bank.dart';
 import 'package:flutter/material.dart';
 
 class TopupPage extends StatelessWidget {
@@ -44,6 +46,32 @@ class TopupPage extends StatelessWidget {
                 Text('Angga Risky', style: greyTextStyle.copyWith(fontSize: 12))
               ])
             ],
+          ),
+          const SizedBox(
+            height: 40,
+          ),
+          Text(
+            'Select Bank',
+            style: blackTextStyle.copyWith(fontSize: 16, fontWeight: semiBold),
+          ),
+          const SizedBox(
+            height: 16,
+          ),
+          TopupBank(
+            imageUrl: 'assets/img_bank_bca.png',
+            title: 'BANK BCA',
+            isSelected: true,
+          ),
+          TopupBank(imageUrl: 'assets/img_bank_bni.png', title: 'BANK BNI'),
+          TopupBank(
+              imageUrl: 'assets/img_bank_mandiri.png', title: 'BANK Mandiri'),
+          TopupBank(imageUrl: 'assets/img_bank_ocbc.png', title: 'BANK OCBC'),
+          const SizedBox(
+            height: 12,
+          ),
+          CustomFilledButton(title: 'Continue'),
+          const SizedBox(
+            height: 57,
           )
         ],
       ),
