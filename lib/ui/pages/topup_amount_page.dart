@@ -1,5 +1,7 @@
 import 'package:ewallet_project_app/shared/theme.dart';
 import 'package:ewallet_project_app/ui/widgets/buttons.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:intl/intl.dart';
 import 'package:flutter/material.dart';
 
 class TopupAmountPage extends StatefulWidget {
@@ -12,11 +14,27 @@ class TopupAmountPage extends StatefulWidget {
 class _TopupAmountPageState extends State<TopupAmountPage> {
   TextEditingController amountController = TextEditingController(text: '0');
 
+  @override
+  initState() {
+    super.initState();
+    amountController.addListener(() {
+      final text = amountController.text.replaceAll('.', '');
+      if (text.isNotEmpty && int.tryParse(text) != null) {
+        amountController.value = amountController.value.copyWith(
+          text: NumberFormat.currency(
+            locale: 'id',
+            decimalDigits: 0,
+            symbol: '',
+          ).format(int.parse(text)),
+        );
+      }
+    });
+  }
+
   addAmount(String number) {
     if (amountController.text == '0') {
       amountController.text = '';
     }
-
     setState(() {
       amountController.text = amountController.text + number;
     });
@@ -173,6 +191,7 @@ class _TopupAmountPageState extends State<TopupAmountPage> {
             title: 'Checkout Now',
             onPressed: () async {
               if (await Navigator.pushNamed(context, '/pin') == true) {
+                await launchUrl(Uri.parse('https://demo.midtrans.com/'));
                 Navigator.pushNamedAndRemoveUntil(
                     context, '/topup-success', (route) => false);
               }
