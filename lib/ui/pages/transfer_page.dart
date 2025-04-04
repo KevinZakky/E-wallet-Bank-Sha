@@ -1,6 +1,8 @@
 import 'package:ewallet_project_app/shared/theme.dart';
 import 'package:ewallet_project_app/ui/widgets/Forms.dart';
+import 'package:ewallet_project_app/ui/widgets/buttons.dart';
 import 'package:ewallet_project_app/ui/widgets/transfer_recently.dart';
+import 'package:ewallet_project_app/ui/widgets/transfer_result.dart';
 import 'package:flutter/material.dart';
 
 class TransferPage extends StatelessWidget {
@@ -29,13 +31,24 @@ class TransferPage extends StatelessWidget {
             title: 'by username',
             isShowTitle: false,
           ),
-          buildRcently()
+          // buildRecently()
+          buildResult(),
+          const SizedBox(
+            height: 274,
+          ),
+          CustomFilledButton(
+            title: 'Continue',
+            onPressed: () {},
+          ),
+          const SizedBox(
+            height: 50,
+          )
         ],
       ),
     );
   }
 
-  Widget buildRcently() {
+  Widget buildRecently() {
     return Container(
       margin: const EdgeInsets.only(top: 40),
       child: Column(
@@ -64,6 +77,31 @@ class TransferPage extends StatelessWidget {
             name: 'Masayoshi',
             username: 'form',
           )
+        ],
+      ),
+    );
+  }
+
+  Widget buildResult() {
+    return Container(
+      margin: const EdgeInsets.only(top: 40),
+      child: Wrap(
+        spacing: 17,
+        runSpacing: 17,
+        children: [
+          TransferResult(
+            imageUrl: 'assets/img_friend1.png',
+            name: 'Yonna Jie',
+            username: 'yoenna',
+            isVerified: true,
+          ),
+          TransferResult(
+            imageUrl: 'assets/img_friend2.png',
+            name: 'Yonne Ka',
+            username: 'yoenyu',
+            isVerified: false,
+            isSelected: true,
+          ),
         ],
       ),
     );
