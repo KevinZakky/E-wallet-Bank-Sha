@@ -1,4 +1,5 @@
 import 'package:ewallet_project_app/shared/theme.dart';
+import 'package:ewallet_project_app/ui/widgets/buttons.dart';
 import 'package:ewallet_project_app/ui/widgets/data_provider_items.dart';
 import 'package:flutter/material.dart';
 
@@ -73,6 +74,16 @@ class DataProviverPage extends StatelessWidget {
           DataProviderItems(
               providerName: 'Singtel ID',
               imageUrl: 'assets/img_provider_singtel.png'),
+          const SizedBox(
+            height: 110,
+          ),
+          CustomFilledButton(
+            title: 'Continue',
+            onPressed: () {},
+          ),
+          const SizedBox(
+            height: 57,
+          )
         ],
       ),
     );
