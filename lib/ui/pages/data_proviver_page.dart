@@ -1,4 +1,5 @@
 import 'package:ewallet_project_app/shared/theme.dart';
+import 'package:ewallet_project_app/ui/widgets/data_provider_items.dart';
 import 'package:flutter/material.dart';
 
 class DataProviverPage extends StatelessWidget {
@@ -46,11 +47,32 @@ class DataProviverPage extends StatelessWidget {
                   Text(
                     'Balance: Rp 180.000.000',
                     style: greyTextStyle.copyWith(fontSize: 12),
-                  )
+                  ),
                 ],
-              )
+              ),
             ],
-          )
+          ),
+          const SizedBox(
+            height: 40,
+          ),
+          Text(
+            'Select Provider',
+            style: blackTextStyle.copyWith(fontSize: 16, fontWeight: semiBold),
+          ),
+          const SizedBox(
+            height: 14,
+          ),
+          DataProviderItems(
+            providerName: 'Telkomsel',
+            imageUrl: 'assets/img_provider_telkomsel.png',
+            isSelected: true,
+          ),
+          DataProviderItems(
+              providerName: 'Indosat Ooredoo',
+              imageUrl: 'assets/img_provider_indosat.png'),
+          DataProviderItems(
+              providerName: 'Singtel ID',
+              imageUrl: 'assets/img_provider_singtel.png'),
         ],
       ),
     );
