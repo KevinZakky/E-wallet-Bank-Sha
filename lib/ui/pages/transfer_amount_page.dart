@@ -1,6 +1,5 @@
 import 'package:ewallet_project_app/shared/theme.dart';
 import 'package:ewallet_project_app/ui/widgets/buttons.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'package:intl/intl.dart';
 import 'package:flutter/material.dart';
 
