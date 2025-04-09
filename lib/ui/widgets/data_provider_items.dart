@@ -21,8 +21,12 @@ class DataProviderItems extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
         color: whiteColor,
-        border:
-            Border.all(width: 2, color: isSelected ? blueColor : whiteColor),
+        border: isSelected
+            ? Border.all(
+                width: 2,
+                color: blueColor,
+              )
+            : null,
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,

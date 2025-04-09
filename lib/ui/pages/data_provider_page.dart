@@ -3,8 +3,8 @@ import 'package:ewallet_project_app/ui/widgets/buttons.dart';
 import 'package:ewallet_project_app/ui/widgets/data_provider_items.dart';
 import 'package:flutter/material.dart';
 
-class DataProviverPage extends StatelessWidget {
-  const DataProviverPage({super.key});
+class DataProviderPage extends StatelessWidget {
+  const DataProviderPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -75,11 +75,13 @@ class DataProviverPage extends StatelessWidget {
               providerName: 'Singtel ID',
               imageUrl: 'assets/img_provider_singtel.png'),
           const SizedBox(
-            height: 110,
+            height: 135,
           ),
           CustomFilledButton(
             title: 'Continue',
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, '/data-package');
+            },
           ),
           const SizedBox(
             height: 57,
