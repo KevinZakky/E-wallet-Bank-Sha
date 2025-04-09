@@ -471,7 +471,9 @@ class MoreDialog extends StatelessWidget {
                 HomeServices(
                   iconUrl: 'assets/ic_product_data.png',
                   title: 'Data',
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.pushNamed(context, '/data-provider');
+                  },
                 ),
                 HomeServices(
                   iconUrl: 'assets/ic_product_water.png',
