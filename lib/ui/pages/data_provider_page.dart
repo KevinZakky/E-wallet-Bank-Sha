@@ -1,3 +1,4 @@
+import 'package:ewallet_project_app/shared/shared_method.dart';
 import 'package:ewallet_project_app/shared/theme.dart';
 import 'package:ewallet_project_app/ui/widgets/buttons.dart';
 import 'package:ewallet_project_app/ui/widgets/data_provider_items.dart';
@@ -46,7 +47,7 @@ class DataProviderPage extends StatelessWidget {
                     height: 2,
                   ),
                   Text(
-                    'Balance: Rp 180.000.000',
+                    'Balance: ${formatCurrency(180000000)}',
                     style: greyTextStyle.copyWith(fontSize: 12),
                   ),
                 ],

@@ -1,3 +1,4 @@
+import 'package:ewallet_project_app/shared/shared_method.dart';
 import 'package:ewallet_project_app/shared/theme.dart';
 import 'package:ewallet_project_app/ui/widgets/home_friendly_tips.dart';
 import 'package:ewallet_project_app/ui/widgets/home_latest_transaction.dart';
@@ -199,7 +200,7 @@ class HomePage extends StatelessWidget {
             style: whiteTextStyle,
           ),
           Text(
-            'Rp. 12.500',
+            formatCurrency(12500),
             style: whiteTextStyle.copyWith(
               fontSize: 24,
               fontWeight: semiBold,
@@ -228,12 +229,12 @@ class HomePage extends StatelessWidget {
               ),
               const Spacer(),
               Text(
-                '55%',
+                '55% ',
                 style:
                     greenTextStyle.copyWith(fontSize: 14, fontWeight: semiBold),
               ),
               Text(
-                ' of Rp. 20.000',
+                'of ${formatCurrency(20000)}',
                 style:
                     blackTextStyle.copyWith(fontSize: 14, fontWeight: semiBold),
               ),
@@ -329,27 +330,27 @@ class HomePage extends StatelessWidget {
                     iconUrl: 'assets/ic_transaction_cat1.png',
                     title: 'Top Up',
                     date: 'Yesterday',
-                    value: '+ 450.000'),
+                    value: '+ ${formatCurrency(450000, symbol: '')}'),
                 HomeLatestTransaction(
                     iconUrl: 'assets/ic_transaction_cat2.png',
                     title: 'Cashback',
                     date: 'Sep 11',
-                    value: '+ 22.000'),
+                    value: '+ ${formatCurrency(22000, symbol: '')}'),
                 HomeLatestTransaction(
                     iconUrl: 'assets/ic_transaction_cat3.png',
                     title: 'Withdraw',
                     date: 'Sep 2',
-                    value: '- 5.000'),
+                    value: '- ${formatCurrency(5000, symbol: '')}'),
                 HomeLatestTransaction(
                     iconUrl: 'assets/ic_transaction_cat4.png',
                     title: 'Transfer',
                     date: 'Aug 27',
-                    value: '- 123.500'),
+                    value: '- ${formatCurrency(123500, symbol: '')}'),
                 HomeLatestTransaction(
                     iconUrl: 'assets/ic_transaction_cat5.png',
                     title: 'Electric',
                     date: 'Feb 18',
-                    value: '- 12.300.000')
+                    value: '- ${formatCurrency(12300000, symbol: '')}')
               ],
             ),
           )
